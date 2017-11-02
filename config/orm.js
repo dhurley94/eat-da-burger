@@ -1,17 +1,14 @@
-'use strict';
-
 const connect = require('./connection');
-let fullResults;
 
 module.exports = {
     /**
      * Get all data from `burgers` tbl
      * return array ordered by id
      */
-    selectAll: () => {
+    selectAll: (cb) => {
         connect.execute('SELECT * FROM burgers ORDER BY id', (error, result) => {
             if (error) { return console.log(error); }
-            fullResults = result;
+            cb = result;
             return result;
         });
     },
@@ -35,6 +32,5 @@ module.exports = {
             if (error) { return console.log(error); }
             console.log('Updated', result.burger_name, 'to', _devoured);
         });
-    },
-    fullResults
+    }
 }

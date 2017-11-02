@@ -2,21 +2,21 @@ const burger = require('../models/burger');
 const router = require('express').Router();
 const bodyParser = require('body-parser');
 
-let urlencodedParser = bodyParser.urlencoded({ extended: false })
+let urlencodedParser = bodyParser.urlencoded({ extended: true })
 
 router.get('/', (req, res) => {
     res.redirect('/index');
 });
 
-router.get('/index', urlencodedParser, (req, res) => {
+router.get('/index', (req, res) => {
     let content = burger.returnBurgers();
-    res.render('index', {content: content});
+    res.render('index', {burgs: content});
 });
 
 router.post('/index', urlencodedParser, (req, res) => {
     let newBurger = req.body.burger;
     burger.addBurger(newBurger);
-    res.render('index', {content: newBurger});
+    res.redirect('/');
 });
 
 module.exports = router;

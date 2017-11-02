@@ -1,3 +1,5 @@
-{{#each BinaryRow }}
-    <li class="list-group-item">{{ burger_name }}</li>
-{{/each }}
+<ul class="list-group">
+  {{#each burgs }}
+      <li class="list-group-item">{{ burger_name }} created on {{ date }}</li>
+  {{/each }}
+</ul>
