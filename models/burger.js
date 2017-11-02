@@ -1,20 +1,17 @@
 const orm = require('../config/orm');
 
-class Burger {
-    constructor(_burgerName) {
-        this._burgerName = _burgerName;
-    }
+let Burger = {
 
-    returnBurgers() {
+    returnBurgers: () => {
         orm.selectAll();
-    }
+    },
 
-    addBurger(bgName) {
-        orm.insertOne(this.bgName);
-    }
+    addBurger: (bgName) => {
+        orm.insertOne(bgName);
+    },
 
-    updateDevoured(id, status) {
-        orm.updateOne(this.id, this.status);
+    updateDevoured: (id, status) => {
+        orm.updateOne(id, status);
     }
 }
 

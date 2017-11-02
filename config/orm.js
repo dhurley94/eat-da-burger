@@ -12,7 +12,7 @@ module.exports = {
         });
     },
     insertOne: (bg_name) => {
-        connect.execute('INSERT INTO burgers(burger_name) VALUES (' + bg_name + ');', (error) => {
+        connect.execute('INSERT INTO burgers (burger_name) VALUES (' + bg_name + ');', (error) => {
             if (error) throw error
             console.log('New burger inserted', bg_name);
         });
