@@ -7,6 +7,10 @@
     "test": "nodemon server.js",
     "start": "node server.js"
   },
+  "engines": {
+    "node": "8.8.0",
+    "npm": "5.5.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dhurley94/eat-da-burger.git"
@@ -22,6 +26,7 @@
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
     "method-override": "^2.3.10",
-    "mysql2": "^1.4.2"
+    "mysql2": "^1.4.2",
+    "path": "^0.12.7"
   }
 }

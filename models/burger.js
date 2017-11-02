@@ -1,7 +1,6 @@
 const orm = require('../config/orm');
 
-let Burger = {
-
+module.exports = {
     returnBurgers: () => {
         orm.selectAll();
     },
@@ -14,5 +13,3 @@ let Burger = {
         orm.updateOne(id, status);
     }
 }
-
-module.exports = Burger;
