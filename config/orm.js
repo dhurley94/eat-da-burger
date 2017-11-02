@@ -1,4 +1,7 @@
+'use strict';
+
 const connect = require('./connection');
+let fullResults;
 
 module.exports = {
     /**
@@ -6,16 +9,11 @@ module.exports = {
      * return array ordered by id
      */
     selectAll: () => {
-        let fullDb = [];
         connect.execute('SELECT * FROM burgers ORDER BY id', (error, result) => {
-            if (!error) {
-                result.forEach((element) => {
-                    fullDb.push(element);
-                });
-                return fullDb;
-            }
+            if (error) { return console.log(error); }
+            fullResults = result;
+            return result;
         });
-        
     },
     /**
      * INSERTS data from form into `burgers` tbl
@@ -37,5 +35,6 @@ module.exports = {
             if (error) { return console.log(error); }
             console.log('Updated', result.burger_name, 'to', _devoured);
         });
-    }
+    },
+    fullResults
 }

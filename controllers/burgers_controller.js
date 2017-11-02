@@ -9,13 +9,14 @@ router.get('/', (req, res) => {
 });
 
 router.get('/index', urlencodedParser, (req, res) => {
-    res.render('index', { content: burger.returnBurgers() });
+    let content = burger.returnBurgers();
+    res.render('index', {content: content});
 });
 
 router.post('/index', urlencodedParser, (req, res) => {
     let newBurger = req.body.burger;
     burger.addBurger(newBurger);
-    res.render('index', { content: newBurger });
+    res.render('index', {content: newBurger});
 });
 
 module.exports = router;
