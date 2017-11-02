@@ -1,9 +1,3 @@
-DROP DATABASE IF EXISTS burgers_db;
-
-CREATE DATABASE burgers_db;
-
-USE burgers_db;
-
 CREATE TABLE burgers (
     id INT AUTO_INCREMENT NOT NULL,
     burger_name VARCHAR(255) NOT NULL,
@@ -11,3 +5,8 @@ CREATE TABLE burgers (
     date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY(id)
 );
+
+INSERT INTO burgers (burger_name) VALUES ("BBQ Bacon Burger");
+INSERT INTO burgers (burger_name) VALUES ("Bacon Burger");
+INSERT INTO burgers (burger_name) VALUES ("Cheese Burger");
+INSERT INTO burgers (burger_name) VALUES ("Best Burger");
