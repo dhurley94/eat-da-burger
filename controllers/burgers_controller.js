@@ -8,9 +8,9 @@ router.get('/', (req, res) => {
     res.redirect('/index');
 });
 
-router.get('/index', (req, res) => {
-    let burgerArray = burger.returnBurgers();    
-    res.render('index', { content: burgerArray });
+router.get('/index', urlencodedParser, (req, res) => {
+    let content = burger.returnBurgers();    
+    res.render('index', { content: content });
 });
 
 router.post('/index', urlencodedParser, (req, res) => {
