@@ -14,6 +14,16 @@ app.use(express.static(path.join(__dirname, 'views')));
 
 app.use('/', burgers);
 
+app.use((req, res, next) => {
+    err.status = 404;
+    next(err);
+});
+
+app.use((err, req, res, next) => {
+    res.status(err.status || 500);
+    res.redirect('/');
+});
+
 app.set('port', (process.env.PORT || 3000));
 
 app.listen(app.get('port'), '0.0.0.0', () => {
