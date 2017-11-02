@@ -6,16 +6,16 @@ module.exports = {
      * return array ordered by id
      */
     selectAll: () => {
+        let fullDb = [];
         connect.execute('SELECT * FROM burgers ORDER BY id', (error, result) => {
-            let fullDb = [];
             if (!error) {
                 result.forEach((element) => {
                     fullDb.push(element);
                 });
+                return fullDb;
             }
-            console.log(fullDb);
-            return fullDb;
         });
+        
     },
     /**
      * INSERTS data from form into `burgers` tbl
