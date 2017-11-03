@@ -1,9 +1,7 @@
-// $(document).ready(function () {
-//     $(".form-inline").submit(function(e) {
-//         e.preventDefault();
-//         var userInput = $("[name=burger]").val().trim();
-//         if (userInput === "") {
-//             $(".form-group").effect("bounce", "fast");
-//         }
-//     });
-// });
+$("form").submit(function(e) {
+    if ($("input:burger").val().trim() !== "") {
+        return;
+    }
+    $("span").text("Invalid Input!").show().faceOut(1000);
+    e.preventDefault();
+});
