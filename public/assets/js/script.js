@@ -1,7 +1,8 @@
 $("form").submit(function(e) {
-    if ($("input:burger").val().trim() !== "") {
+    if ($("#burger").val().trim() == '') {
+        e.preventDefault();
+        $("#burgerForm").effect('bounce', 500);
+    } else {
         return;
     }
-    $("span").text("Invalid Input!").show().faceOut(1000);
-    e.preventDefault();
 });
