@@ -4,6 +4,8 @@ $(document).ready(function () {
     //     var userInput = $("[name=burger]").val().trim().toLowerCase();
     //     if (userInput === "") {
     //         $(".form-group").effect("bounce", "fast");
+    //     } else {
+    //         submit();
     //     }
     // })
 });

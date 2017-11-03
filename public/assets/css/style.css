@@ -27,5 +27,11 @@ html, body {
 }
 
 #vertical-align {
-    padding-top: 10%;
+    padding-top: 5%;
+}
+
+.list-group {
+    color: black;
+    font-size: 12px;
+
 }

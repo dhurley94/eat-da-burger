@@ -10,9 +10,14 @@ router.get('/', (req, res) => {
 
 router.get('/index', (req, res) => {
     burger.returnBurgers((content) => {
-        console.log(content);
         res.render('index', { burgs: content });
     });
+});
+
+router.get('/index/:burgerId', (req, res) => {
+    let burgerId = (req.params.burgerId);
+    burger.updateDevoured(burgerId, 1);
+    res.redirect('/');
 });
 
 router.post('/index', urlencodedParser, (req, res) => {

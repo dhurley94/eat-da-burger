@@ -27,9 +27,9 @@ module.exports = {
      * burger id and new `devoured` data
      */
     updateOne: (_id, _devoured) => {
-        connect.execute('UPDATE burgers SET devoured = ? WHERE id = ?;', [_id, _devoured], (error, result) => {
+        connect.execute('UPDATE burgers SET devoured = ? WHERE id = ?;', [_devoured, _id], (error, result) => {
             if (error) { return console.log(error); }
-            console.log('Updated', result.burger_name, 'to', _devoured);
+            console.log('Updated burger id:', _id, 'to', _devoured);
         });
     }
 }
