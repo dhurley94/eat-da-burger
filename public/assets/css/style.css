@@ -30,8 +30,17 @@ html, body {
     padding-top: 5%;
 }
 
+#devoured {
+    background-color: grey;
+    color: white;
+}
+
 .list-group {
     color: black;
     font-size: 12px;
 
+}
+
+#burgerForm {
+    width: 100%;
 }

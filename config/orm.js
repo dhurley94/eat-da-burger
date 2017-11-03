@@ -18,7 +18,6 @@ module.exports = {
     insertOne: (bg_name) => {
         connect.execute('INSERT INTO burgers (burger_name) VALUES (?)', [bg_name], (error, result) => {
             if (error) { return console.log(error); }
-            console.log('New burger inserted, Name:', bg_name);
         });
     },
     /**
@@ -29,7 +28,6 @@ module.exports = {
     updateOne: (_id, _devoured) => {
         connect.execute('UPDATE burgers SET devoured = ? WHERE id = ?;', [_devoured, _id], (error, result) => {
             if (error) { return console.log(error); }
-            console.log('Updated burger id:', _id, 'to', _devoured);
         });
     }
 }
