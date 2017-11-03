@@ -26,6 +26,19 @@ html, body {
     color: white;
 }
 
+@keyframes rubberBand {
+    100% {
+        transform: translate(0);
+    }
+    0% {
+        transform: translate(-100%);
+    }
+}
+
+/* .container {
+    animation: 1s rubberBand;
+} */
+
 #vertical-align {
     padding-top: 5%;
 }
@@ -44,3 +57,4 @@ html, body {
 #burgerForm {
     width: 100%;
 }
+

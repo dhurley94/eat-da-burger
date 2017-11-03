@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -14,9 +15,11 @@
         <div class="row">
             <div class="col-sm-12 col-md-6">
                 <form class="form-inline" method="POST">
-                    <div class="form-group" id="burgerForm">
+                    <div class="input-group" id="burgerForm">
                         <input type="text" name="burger" class="form-control" id="burger" placeholder="BBQ Bacon Burger" required>
-                        <button type="submit" class="btn btn-light">Submit</button>
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn btn-secondary">Add Burger!</button>
+                        </span>
                     </div>
                 </form>
             </div>
