@@ -8,8 +8,7 @@ module.exports = {
     selectAll: (cb) => {
         connect.execute('SELECT * FROM burgers ORDER BY id', (error, result) => {
             if (error) { return console.log(error); }
-            cb = result;
-            return result;
+            return cb(result);
         });
     },
     /**

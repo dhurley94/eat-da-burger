@@ -1,8 +1,10 @@
 const orm = require('../config/orm');
 
 module.exports = {
-    returnBurgers: () => {
-        orm.selectAll();
+    returnBurgers: (cb) => {
+        orm.selectAll((result) => {
+            return cb(result);
+        });
     },
 
     addBurger: (bgName) => {
