@@ -58,3 +58,8 @@ html, body {
     width: 100%;
 }
 
+#burger-img {
+    -vendor-animation-duration: 3s;
+    -vendor-animation-delay: 2s;
+    -vendor-animation-iteration-count: 1;
+}
