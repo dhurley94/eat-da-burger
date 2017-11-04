@@ -1,4 +1,4 @@
-$("form").submit(function(e) {
+$("form").submit(function (e) {
     if ($("#burger").val().trim() == '') {
         e.preventDefault();
         $("#burgerForm").effect('bounce', 500);
@@ -8,6 +8,6 @@ $("form").submit(function(e) {
     }
 });
 
-$('btn-info').on('click', function() {
+$('btn-info').on('click', function () {
     $('#burger-img').animateCss('rubberBand');
 });
